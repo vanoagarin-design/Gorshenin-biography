@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реклама Тимофея</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif;}
+        body {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: white;}
+        .container {max-width: 1200px; margin: 0 auto; padding: 20px;}
+        header {text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; backdrop-filter: blur(10px);}
+        h1 {font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+        .subtitle {font-size: 1.2em; opacity: 0.9;}
+        .tabs {display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;}
+        .tab-button {padding: 12px 24px; background: rgba(255, 255, 255, 0.2); border: none; border-radius: 25px; color: white; font-size: 1em; cursor: pointer; transition: all 0.3s ease; backdrop-filter: blur(10px);}
+        .tab-button:hover {background: rgba(255, 255, 255, 0.3); transform: translateY(-2px);}
+        .tab-button.active {background: rgba(255, 255, 255, 0.4); font-weight: bold;}
+        .tab-content {background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; min-height: 300px; backdrop-filter: blur(10px); display: none;}
+        .tab-content.active {display: block; animation: fadeIn 0.5s ease;}
+        @keyframes fadeIn {from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); }}
+        .content-section {margin-bottom: 20px;}
+        .content-section h2 {margin-bottom: 15px; color: #ffeb3b;}
+        .soundcloud-link {display: inline-block; padding: 15px 30px; background: #ff5500; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s ease; margin: 10px 10px 10px 0;}
+        .soundcloud-link:hover {background: #ff3300; transform: scale(1.05);}
+        .vk-link {display: inline-block; padding: 15px 30px; background: #4a76a8; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s ease; margin: 10px 10px 10px 0;}
+        .vk-link:hover {background: #3d638f; transform: scale(1.05);}
+        .music-links {display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;}
+        .mcdonalds-item {background: rgba(255, 255, 255, 0.2); padding: 15px; margin: 10px 0; border-radius: 10px; border-left: 4px solid #ffcc00;}
+        .cool-stats {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;}
+        .stat-card {background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; text-align: center; transition: transform 0.3s ease;}
+        .stat-card:hover {transform: translateY(-5px);}
+        .stat-number {font-size: 2em; font-weight: bold; color: #ffeb3b; display: block;}
+        @media (max-width: 768px) {
+            .tabs {flex-direction: column; align-items: center;}
+            .tab-button {width: 100%; max-width: 300px;}
+            h1 {font-size: 2em;}
+            .music-links {flex-direction: column;}
+            .soundcloud-link, .vk-link {width: 100%; text-align: center; margin: 5px 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Реклама Тимофея 🚀</h1>
+            <p class="subtitle">Лучший одногруппник в истории!</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('fio')">ФИО</button>
+            <button class="tab-button" onclick="openTab('cool')">Иба чотко</button>
+            <button class="tab-button" onclick="openTab('mcdonalds')">Макдональс</button>
+            <button class="tab-button" onclick="openTab('sc')">SC</button>
+        </div>
+
+        <div id="fio" class="tab-content active">
+            <div class="content-section">
+                <h2>📝 Полное имя:</h2>
+                <p style="font-size: 1.
+5em; font-weight: bold;">Тимофей Горшенин Тарасович</p>
+            </div>
+            <div class="content-section">
+                <h2>🎓 О себе:</h2>
+                <p>Легендарный студент нашей группы, обладатель невероятных талантов и просто крутой парень!</p>
+            </div>
+            <div class="content-section">
+                <h2>⭐ Особенности:</h2>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 8px 0;">🎯 Всегда знает правильные ответы</li>
+                    <li style="padding: 8px 0;">💪 Помогает одногруппникам</li>
+                    <li style="padding: 8px 0;">😎 Обладает отличным чувством юмора</li>
+                    <li style="padding: 8px 0;">🚀 Будущий успешный специалист</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="cool" class="tab-content">
+            <div class="content-section">
+                <h2>🔥 Почему Тимофей иба чотко?</h2>
+                <p>Тимофей - это эталон крутости в нашей группе! Вот лишь несколько причин:</p>
+            </div>
+            <div class="cool-stats">
+                <div class="stat-card"><span class="stat-number">100%</span><span>Успеваемость</span></div>
+                <div class="stat-card"><span class="stat-number">24/7</span><span>Готов помочь</span></div>
+                <div class="stat-card"><span class="stat-number">∞</span><span>Количество шуток</span></div>
+                <div class="stat-card"><span class="stat-number">💯</span><span>Общая крутость</span></div>
+            </div>
+            <div class="content-section">
+                <h2>🏆 Достижения:</h2>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 8px 0;">✅ Спас группу от провала на экзамене</li>
+                    <li style="padding: 8px 0;">✅ Организовал лучшие посиделки</li>
+                    <li style="padding: 8px 0;">✅ Знает все мемы до их появления</li>
+                    <li style="padding: 8px 0;">✅ Мастер по заказу в Макдональдсе</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mcdonalds" class="tab-content">
+            <div class="content-section">
+                <h2>🍔 Макдональдс-эксперт</h2>
+                <p>Тимофей - настоящий гуру фастфуда! Он знает все секреты меню:</p>
+            </div>
+            <div class="content-section">
+                <h3>🎯 Топ заказов Тимофея:</h3>
+                <div class="mcdonalds-item"><strong>Биг-Тейсти Комбо</strong><p>С картошкой фри и колой + соус на выбор</p></div>
+                <div class="mcdonalds-item"><strong>Чикен МакНаггетс (20 шт)</strong><p>С 3 разными соусами для максимального удовольствия</p></div>
+                <div class="mcdonalds-item"><strong>Айс-Латте</strong><p>Идеальный баланс кофе и молока</p></div>
+            </div>
+            <div class="content-section">
+                <h3>💡 Профессиональные советы:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 8px 0;">📱 Заказывай через приложение - там скидки!</li>
+                    <li style="padding: 8px 0;">🕒 В обеденное время избегай очередей</li>
+                    <li style="padding: 8px 0;">🎁 Не забывай про акции и специальные предложения</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="sc" class="tab-content">
+            <div class="content-section">
+                <h2>🎵 Музыка Тимофея</h2>
+                <p>Тимофей не только крутой студент, но и талантливый музыкант! Послушай его треки на разных платформах:</p>
+                <div class="music-links">
+                    <a href="https://on.soundcloud.com/ZgyJmhgJOWiqqUfBK1" class="soundcloud-link" target="_blank">🎧 SoundCloud 🎧</a>
+                    <a href="https://vk.com/audio1031662010_456239018" class="vk-link" target="_blank">🎵 ВКонтакте 🎵</a>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3>🎶 О музыке:</h3>
+<p>Тимофей создает уникальные треки, которые сочетают в себе:</p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 10px;">
+                    <li style="padding: 8px 0;">🎹 Глубокие мелодии</li>
+                    <li style="padding: 8px 0;">🎧 Современные биты</li>
+                    <li style="padding: 8px 0;">🌟 Креативный подход</li>
+                    <li style="padding: 8px 0;">💫 Уникальный стиль</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <h3>📢 Поддержи артиста:</h3>
+                <p>Не забудь поставить лайк, сделать репост и оставить комментарий! Твоя поддержка очень важна! 👍</p>
+            </div>
+            <div class="content-section">
+                <h3>🎼 Последние релизы:</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 8px 0; background: rgba(255,255,255,0.1); margin: 5px 0; padding: 10px; border-radius: 8px;"><strong>Новый трек на SoundCloud</strong> - эксклюзивный релиз</li>
+                    <li style="padding: 8px 0; background: rgba(255,255,255,0.1); margin: 5px 0; padding: 10px; border-radius: 8px;"><strong>Популярный трек ВКонтакте</strong> - уже набирает популярность</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
